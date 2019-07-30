@@ -38,10 +38,11 @@
   const NOPE = './drake_nope.jpg'
   const YUP = './drake_yup.jpg'
 
-  for (let i = 0; i < 182; i++) {
-    createDrake(NOPE, 'Blink ' + i)
+  const max = 420
+  for (let i = 0; i < max; i++) {
+    createDrake(NOPE, i)
   }
-  createDrake(YUP, 'Blink 182')
+  createDrake(YUP, max)
 
   function createDrake(src, text) {
     let div = document.createElement('div')
