@@ -1,7 +1,7 @@
 <style>
   body {
     font-family: Impact;
-    font-size: 32pt;
+    font-size: 26pt;
   }
 
   img {
@@ -39,9 +39,9 @@
   const  YUP = './drake_yup.png'
 
   for (let i = 0; i < 182; i++) {
-    createDrake(NOPE, i)
+    createDrake(NOPE, 'Blink ' + i)
   }
-  createDrake(YUP, 182)
+  createDrake(YUP, 'Blink 182')
 
   function createDrake(src, text) {
     let div = document.createElement('div')
