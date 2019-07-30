@@ -1,0 +1,62 @@
+<style>
+  body {
+    font-family: Impact;
+    font-size: 32pt;
+  }
+
+  img {
+    max-width: 200px;
+  }
+
+  .drake {
+    width: 400px;
+    height: 198px;
+    border: solid black 1px;
+
+    position: relative;
+  }
+
+  .centered {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+</style>
+
+<body>
+  <div id="container"></div>
+</body>
+
+<script>
+  const NOPE = './drake_nope.png'
+  const  YUP = './drake_yup.png'
+
+  for (let i = 0; i < 182; i++) {
+    createDrake(NOPE, i)
+  }
+  createDrake(YUP, 182)
+
+  function createDrake(src, text) {
+    let div = document.createElement('div')
+    let img = document.createElement('img')
+    let txt = document.createElement('div')
+
+    img.src = src
+    txt.textContent = text
+
+    div.classList.add('drake')
+    txt.classList.add('centered')
+
+    div.append(img, txt)
+    document.getElementById('container').append(div)
+  }
+</script>
+
+
